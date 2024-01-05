@@ -1,6 +1,6 @@
 import { UserProfile } from "@clerk/nextjs";
 
-export default () => {
+const ProfilePage = () => {
   return (
     <UserProfile
       appearance={{
@@ -20,3 +20,5 @@ export default () => {
     />
   );
 };
+
+export default ProfilePage

@@ -50,7 +50,7 @@ const Sidebar = () => {
   );
 };
 
-export default () => {
+const IndexPage = () => {
   return (
     <>
       <div className="fixed hidden md:flex lg:flex backdrop-blur h-full left-0 w-28  flex-col  space-y-4 bg-slate-800/20 p-4 border-r border-slate-600/20">
@@ -231,3 +231,5 @@ export default () => {
     </>
   );
 };
+
+export default IndexPage;
