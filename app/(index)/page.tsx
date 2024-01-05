@@ -15,10 +15,11 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="flex flex-col h-full space-y-4">
+      <div className="flex flex-col space-y-4">
         <h1 className="text-xs tracking-widest text-slate-400 uppercase">
           Features
         </h1>
+        <Separator />
         <Link href={"/sign-in"}>
           <Button className="bg-indigo-500 text-white hover:text-indigo-500">
             Sign In
@@ -41,7 +42,6 @@ const Sidebar = () => {
           </Button>
         </div>
       </div>
-      <Separator />
       <div className="flex justify-between items-center">
         <ThemeToggle />
         <UserButton />
@@ -53,7 +53,7 @@ const Sidebar = () => {
 const IndexPage = () => {
   return (
     <>
-      <div className="fixed hidden md:flex lg:flex backdrop-blur h-full left-0 w-28  flex-col  space-y-4 bg-slate-800/20 p-4 border-r border-slate-600/20">
+      <div className="fixed hidden md:flex lg:flex backdrop-blur h-full left-0 w-28 flex-col justify-center space-y-4 bg-slate-800/20 p-4 border-r border-slate-600/20">
         <Sidebar />
       </div>
 
