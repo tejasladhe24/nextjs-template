@@ -1,6 +1,13 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import React from "react";
 
 export default ({ children }: { children: React.ReactNode }) => {
-  return <ClerkProvider>{children}</ClerkProvider>;
+  return (
+    <>
+      <div className="fixed bg-slate-800/20 z-10 backdrop-blur top-0 left-0 w-full p-4 flex flex-row-reverse items-center gap-x-4">
+        <UserButton />
+      </div>
+      <main className="pt-16">{children}</main>
+    </>
+  );
 };
