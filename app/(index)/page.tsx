@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useSampleHook } from "@/hooks/useSampleHook";
-import { UserButton } from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { toast } from "sonner";
@@ -25,11 +25,13 @@ const Sidebar = () => {
             Sign In
           </Button>
         </Link>
-        <Link href={"/profile"}>
-          <Button className="bg-indigo-700 text-white hover:text-indigo-700">
-            Profile
-          </Button>
-        </Link>
+        <SignedIn>
+          <Link href={"/profile"}>
+            <Button className="bg-indigo-700 text-white hover:text-indigo-700">
+              Profile
+            </Button>
+          </Link>
+        </SignedIn>
 
         <div className="flex">
           <Button
